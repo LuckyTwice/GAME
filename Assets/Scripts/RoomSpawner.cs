@@ -18,12 +18,12 @@ public class RoomSpawner : MonoBehaviour
     private RoomsVariant variant;
     private int rand;
     private bool spawned = false;
-    private float waittime = 3f;
+    private float waitTime = 3f;
 
     private void Start()
     {
         variant = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomsVariant>();
-        Destroy(gameObject, waittime);
+        Destroy(gameObject, waitTime);
         Invoke("Spawn", 0.2f);
     }
     public void Spawn()
@@ -42,7 +42,7 @@ public class RoomSpawner : MonoBehaviour
             }
             else if (direction == Direction.Right)
             {
-                rand = Random.Range(0, variant.RightRooms.Length);
+                rand = Random.Range(0, -variant.RightRooms.Length);
                 Instantiate(variant.RightRooms[rand], transform.position, variant.RightRooms[rand].transform.rotation);
             }
             else if (direction == Direction.Left)

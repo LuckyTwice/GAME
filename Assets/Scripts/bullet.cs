@@ -10,13 +10,16 @@ public class bullet : MonoBehaviour
     public float distance;
     public int damage;
     public LayerMask whatIsSolid;
-    void Start()
+
+    public GameObject destroyEffect;
+
+    private void Start()
     {
         Invoke("DestroyBullet", lifetime);
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
         if (hitInfo.collider != null)
@@ -31,7 +34,7 @@ public class bullet : MonoBehaviour
     }
     public void DestroyBullet()
     {
-        //Instantiate(destroyEffect, transform.position, Quaternion.indentity);
+        Instantiate(destroyEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
