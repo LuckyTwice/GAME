@@ -6,6 +6,6 @@ public class RoomsVariant : MonoBehaviour
 {
     public GameObject[] UpRooms;
     public GameObject[] DownRooms;
-    public GameObject[] RightRooms;
     public GameObject[] LeftRooms;
+    public GameObject[] RightRooms;
 }

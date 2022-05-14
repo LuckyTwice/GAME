@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hero_Controle : MonoBehaviour
 {
     public float speed;
+    public float health;
     private bool facingRight;
     private Rigidbody2D rb;
     private Vector2 moveInput;

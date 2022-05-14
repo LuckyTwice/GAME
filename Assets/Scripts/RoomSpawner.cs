@@ -42,7 +42,7 @@ public class RoomSpawner : MonoBehaviour
             }
             else if (direction == Direction.Right)
             {
-                rand = Random.Range(0, -variant.RightRooms.Length);
+                rand = Random.Range(0, variant.RightRooms.Length);
                 Instantiate(variant.RightRooms[rand], transform.position, variant.RightRooms[rand].transform.rotation);
             }
             else if (direction == Direction.Left)
