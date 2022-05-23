@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.15</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.14</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.30f1</UnityVersion>
@@ -61,10 +61,14 @@
     <Compile Include="Assets\Scripts\bullet.cs" />
     <Compile Include="Assets\Scripts\RoomSpawner.cs" />
     <Compile Include="Assets\Scripts\GUN.cs" />
+    <Compile Include="Assets\Scripts\AddRoom.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\FloatingDamage.cs" />
     <Compile Include="Assets\Scripts\Hero_Controle.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Tupik.cs" />
-    <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\OptionMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hero_Controle : MonoBehaviour
 {
     public float speed;
-    public float health;
+
+    [Header("Health")]
+    public int health;
+    public Text healthDisplay;
+
     private bool facingRight;
     private Rigidbody2D rb;
     private Vector2 moveInput;
@@ -38,6 +43,12 @@ public class Hero_Controle : MonoBehaviour
             Flip();
         }
     }
+    public void ChangeHealth(int healthValue)
+    {
+        health += healthValue;
+        healthDisplay.text = "HP:" + health;
+    }
+
     private void Flip()
     {
         facingRight = !facingRight;

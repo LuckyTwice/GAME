@@ -7,9 +7,12 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     public int Health;
     public float speed;
+    public GameObject floatingDamage;
 
     private Animator anim;
     private float timeBtwAttack;
+    private AddRoom room;
+
     public float startTimeBtwAttack;
     public int damage;
 
@@ -23,11 +26,15 @@ public class Enemy : MonoBehaviour
     {
         stopTime = startStopTime;
         Health -= damage;
+        Vector2 damagePos = new Vector2(transform.position.x, transform.position.y + 0.01f);
+        Instantiate(floatingDamage, damagePos, Quaternion.identity);
+        floatingDamage.GetComponentInChildren<FloatingDamage>().damage = damage;
     }
     private void Start()
     {
         anim = GetComponent<Animator>();
         player = FindObjectOfType<Hero_Controle>();
+        room = GetComponentInParent<AddRoom>();
     }
 
     // Update is called once per frame
@@ -45,12 +52,21 @@ public class Enemy : MonoBehaviour
         if (Health <= 0)
         {
             Destroy(gameObject);
+            room.enemies.Remove(gameObject);
+        }
+        if (player.transform.position.x > transform.position.x)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
     public void OnEnemyAttack()
     {
-        player.health -= damage;
+        player.ChangeHealth(-damage);
         timeBtwAttack = startTimeBtwAttack;
     }
     public void OnTriggerStay2D(Collider2D other)
@@ -59,7 +75,7 @@ public class Enemy : MonoBehaviour
         {
             if (timeBtwAttack <= 0)
             {
-                anim.SetTrigger("run");
+                anim.SetTrigger("attack");
             }
             else
             {

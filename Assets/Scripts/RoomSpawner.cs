@@ -18,13 +18,13 @@ public class RoomSpawner : MonoBehaviour
     private RoomsVariant variant;
     private int rand;
     private bool spawned = false;
-    private float waitTime = 3f;
+    private readonly float waitTime = 3f;
 
     private void Start()
     {
         variant = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomsVariant>();
         Destroy(gameObject, waitTime);
-        Invoke("Spawn", 0.2f);
+        Invoke(nameof(Spawn), 0.2f);
     }
     public void Spawn()
     {

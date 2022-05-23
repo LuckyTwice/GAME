@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6306378045851423807}
   - component: {fileID: 6306378045851423800}
-  - component: {fileID: -4476354546424396672}
+  - component: {fileID: 8542981718148100351}
   m_Layer: 0
   m_Name: Doors
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,7 +47,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5123988, y: 0.021225452}
+  m_Offset: {x: 0.5001313, y: 0.03962657}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -58,9 +58,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0005393, y: 1.0424509}
+  m_Size: {x: 1.8287953, y: 1.0792532}
   m_EdgeRadius: 0
---- !u!114 &-4476354546424396672
+--- !u!114 &8542981718148100351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80,6 +80,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6306378045851423807}
     m_Modifications:
+    - target: {fileID: 559808534156046749, guid: c7cbe357894537246a5307216c7df309, type: 3}
+      propertyPath: m_Size.x
+      value: 0.51977676
+      objectReference: {fileID: 0}
+    - target: {fileID: 559808534156046749, guid: c7cbe357894537246a5307216c7df309, type: 3}
+      propertyPath: m_Size.y
+      value: 0.98886293
+      objectReference: {fileID: 0}
+    - target: {fileID: 559808534156046749, guid: c7cbe357894537246a5307216c7df309, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.01011166
+      objectReference: {fileID: 0}
+    - target: {fileID: 559808534156046749, guid: c7cbe357894537246a5307216c7df309, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.010568529
+      objectReference: {fileID: 0}
+    - target: {fileID: 559808534156046749, guid: c7cbe357894537246a5307216c7df309, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4472464219824600588, guid: c7cbe357894537246a5307216c7df309, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -134,7 +154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4472464219824600590, guid: c7cbe357894537246a5307216c7df309, type: 3}
       propertyPath: m_TagString
-      value: Door
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7cbe357894537246a5307216c7df309, type: 3}
@@ -150,17 +170,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6306378045851423807}
     m_Modifications:
+    - target: {fileID: 1659756266614595937, guid: 2c4878d0d7df3ed4e9d1dad0d6a8882a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.52112514
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659756266614595937, guid: 2c4878d0d7df3ed4e9d1dad0d6a8882a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9888633
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659756266614595937, guid: 2c4878d0d7df3ed4e9d1dad0d6a8882a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.009437412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659756266614595937, guid: 2c4878d0d7df3ed4e9d1dad0d6a8882a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.010568351
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659756266614595937, guid: 2c4878d0d7df3ed4e9d1dad0d6a8882a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2889093739304178517, guid: 2c4878d0d7df3ed4e9d1dad0d6a8882a, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2889093739304178517, guid: 2c4878d0d7df3ed4e9d1dad0d6a8882a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.3888862
+      value: 2.3889112
       objectReference: {fileID: 0}
     - target: {fileID: 2889093739304178517, guid: 2c4878d0d7df3ed4e9d1dad0d6a8882a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.875
+      value: 0.8749998
       objectReference: {fileID: 0}
     - target: {fileID: 2889093739304178517, guid: 2c4878d0d7df3ed4e9d1dad0d6a8882a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -204,7 +244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2889093739304178519, guid: 2c4878d0d7df3ed4e9d1dad0d6a8882a, type: 3}
       propertyPath: m_TagString
-      value: Door
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c4878d0d7df3ed4e9d1dad0d6a8882a, type: 3}
